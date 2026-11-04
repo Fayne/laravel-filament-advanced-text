@@ -1,0 +1,67 @@
+{
+    "name": "fayne/laravel-filament-advanced-text",
+    "description": "Reusable advanced text input for Filament forms.",
+    "type": "library",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.4",
+        "filament/forms": "^5.0",
+        "illuminate/support": "^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^11.0",
+        "pestphp/pest": "^4.0",
+        "pestphp/pest-plugin-laravel": "^4.1",
+        "laravel/pint": "^1.27"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fayne\\AdvancedText\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Fayne\\AdvancedText\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "format": "pint --test",
+        "lint": "@php tools/lint.php",
+        "format:fix": "pint",
+        "check": [
+            "@lint",
+            "@format",
+            "@test"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fayne\\AdvancedText\\AdvancedTextServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Fayne Guo",
+            "email": "fayne.guo@gmail.com"
+        }
+    ],
+    "keywords": [
+        "laravel",
+        "filament",
+        "advanced-text"
+    ],
+    "$schema": "https://getcomposer.org/schema.json",
+    "support": {
+        "email": "fayne.guo@gmail.com"
+    }
+}
